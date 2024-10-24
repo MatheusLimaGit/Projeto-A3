@@ -1,0 +1,14 @@
+# Usando uma imagem oficial do Java
+FROM openjdk:17-jdk-alpine
+
+# Definindo o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Copiando o arquivo JAR do micro-serviço
+COPY target/*.jar app.jar
+
+# Expondo a porta na qual o serviço rodará
+EXPOSE 8080
+
+# Comando para rodar o micro-serviço
+ENTRYPOINT ["java", "-jar", "app.jar"]

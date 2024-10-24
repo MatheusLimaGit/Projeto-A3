@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gestão de Pedidos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#cadastro-clientes">Cadastro de Clientes</a></li>
+            <li><a href="#realizar-pedidos">Realizar Pedidos</a></li>
+            <li><a href="#estoque">Estoque de Ingredientes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="cadastro-clientes">
+            <h2>Cadastro de Clientes</h2>
+            <form id="cliente-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+
+                <button type="submit">Cadastrar Cliente</button>
+            </form>
+        </section>
+
+        <section id="realizar-pedidos">
+            <h2>Realizar Pedidos</h2>
+            <form id="pedido-form">
+                <label for="cliente">Cliente:</label>
+                <select id="cliente" name="cliente" required>
+                    <!-- Opções serão preenchidas dinamicamente -->
+                </select>
+
+                <label for="item">Item do Pedido:</label>
+                <input type="text" id="item" name="item" required>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade" required>
+
+                <button type="submit">Adicionar ao Pedido</button>
+            </form>
+
+            <div id="pedido-lista">
+                <h3>Itens no Pedido:</h3>
+                <ul id="lista-pedidos">
+                    <!-- Itens do pedido aparecerão aqui -->
+                </ul>
+                <button id="finalizar-pedido">Finalizar Pedido</button>
+            </div>
+        </section>
+
+        <section id="estoque">
+            <h2>Estoque de Ingredientes</h2>
+            <table id="estoque-tabela">
+                <thead>
+                    <tr>
+                        <th>Ingrediente</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Informações de estoque serão preenchidas aqui -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Gestão de Pedidos para Restaurantes</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="./restaurante.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gerenciamento de Estoque</h2>
+        <form action="/atualizarEstoque" method="POST">
+            <label for="item">Item:</label>
+            <input type="text" id="item" name="item" required><br>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" required><br>
+
+            <button type="submit">Atualizar Estoque</button>
+        </form>
+        <h3>Estoque Atual</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pizza</td>
+                    <td>10</td>
+                </tr>
+                <!-- Mais itens de estoque -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
